@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "kz.vko.guide.app-mergeDebugResources-2:/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\9.0.0\\transforms\\43cf439a7f2f4e061e197ef567ab6801\\transformed\\browser-1.4.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,255,454,665",
+                        "endColumns": "199,198,210,201",
+                        "endOffsets": "250,449,660,862"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\9.0.0\\transforms\\7f8f444388fb21e6b1de7b6c0a1e47f6\\transformed\\core-1.1.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "202",
+                        "endOffsets": "253"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "867",
+                        "endColumns": "202",
+                        "endOffsets": "1065"
+                    }
+                }
+            ]
+        }
+    ]
+}

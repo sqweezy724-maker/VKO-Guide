@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Этнопарк | ВКО Гид</title>
+    <meta name="description" content="Природно-этнический комплекс с ботаническим садом и традиционными домами народов ВКО.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .hero {
+            position: relative;
+            height: 400px;
+            background: url('https://lh3.googleusercontent.com/places/ANXAkqGXBHsYK5ysMbUG4uIJwc1Bip1w_0mK0Pt_y6PBYcYL_x-ZgyUyW8TaBZemw4PPQzj38iH_CVSU1fmZ8pmpu4sFmrfBrOuJ55Y=s800-w800-h600') center/cover;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+        .hero-content {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            z-index: 1;
+            color: white;
+        }
+        .emoji { font-size: 48px; margin-bottom: 10px; }
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .region { font-size: 16px; opacity: 0.9; }
+        .rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(0,0,0,0.4);
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-top: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .content { padding: 40px 30px; }
+        .section { margin-bottom: 35px; }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #16a34a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: #16a34a;
+            border-radius: 2px;
+        }
+        .description {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+        .info-card {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid #16a34a;
+            margin-bottom: 15px;
+        }
+        .info-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #16a34a;
+        }
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            transition: all 0.2s;
+        }
+        .contact-item:hover {
+            background: #f3f4f6;
+            transform: translateX(5px);
+        }
+        .contact-icon { font-size: 20px; }
+        .contact-label {
+            font-size: 12px;
+            color: #9ca3af;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .contact-value {
+            font-size: 16px;
+            color: #1f2937;
+            font-weight: 500;
+        }
+        .contact-value a {
+            color: #16a34a;
+            text-decoration: none;
+        }
+        .contact-value a:hover { text-decoration: underline; }
+        .pros {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .pro-tag {
+            background: linear-gradient(135deg, #16a34a, #15803d);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .eco-tip {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 20px;
+            border-radius: 16px;
+            border: 2px solid #fbbf24;
+        }
+        .eco-tip::before {
+            content: '💡';
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        .map-container {
+            margin-top: 30px;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 300px;
+            border: 2px solid #e5e7eb;
+        }
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #16a34a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            margin-bottom: 20px;
+        }
+        .back-button:hover {
+            background: #15803d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+        }
+        @media (max-width: 768px) {
+            .hero { height: 300px; }
+            h1 { font-size: 28px; }
+            .content { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="emoji">🌿</div>
+                <h1>Этнопарк</h1>
+                <div class="region">📍 Усть-Каменогорск</div>
+                <div class="rating">⭐ 4.7</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <a href="../index.html" class="back-button">← Назад к карте</a>
+            
+            <div class="section">
+                <div class="section-title">О месте</div>
+                <p class="description">Природно-этнический комплекс с ботаническим садом и традиционными домами народов ВКО.</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">Информация</div>
+                <div class="info-card">
+                    <h3>📋 Подробности</h3>
+                    <p>На территории парка представлены традиционные жилища казахов, русских и других народов региона. Ботанический сад включает более 500 видов растений.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🌱 Экология</h3>
+                    <p>Этнопарк сохраняет редкие местные виды растений и поддерживает традиции бережного отношения к природе коренных народов.</p>
+                </div>
+            </div>
+            
+            <div class="section"><div class="section-title">Контакты</div>
+        <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+                <div class="contact-label">Телефон</div>
+                <div class="contact-value"><a href="tel:+77232754617">+7 (7232) 75-46-17</a></div>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value"><a href="mailto:ethnopark.ust@mail.ru">ethnopark.ust@mail.ru</a></div>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+                <div class="contact-label">Адрес</div>
+                <div class="contact-value">г. Усть-Каменогорск, ул. Казахстан, 38</div>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+                <div class="contact-label">Время работы</div>
+                <div class="contact-value">Вт-Вс: 10:00 - 19:00, Пн: выходной</div>
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="contact-icon">💰</div>
+            <div>
+                <div class="contact-label">Стоимость</div>
+                <div class="contact-value">Взрослые: 400 ₸, Студенты: 200 ₸</div>
+            </div>
+        </div></div>
+            
+            <div class="section">
+                <div class="section-title">Преимущества</div>
+                <div class="pros">
+                    <div class="pro-tag">Культурное наследие</div><div class="pro-tag">Редкие растения</div><div class="pro-tag">Образовательная ценность</div><div class="pro-tag">Прогулочные маршруты</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="eco-tip">Поддерживайте местных производителей — покупка сувениров у местных мастеров помогает сохранить традиции и снижает углеродный след.</div>
+            </div>
+            
+            <div class="map-container">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=82.561,49.885200000000005,82.661,49.9852&layer=mapnik&marker=49.9352,82.611"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

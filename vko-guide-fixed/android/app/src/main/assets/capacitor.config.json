@@ -1,0 +1,21 @@
+{
+	"appId": "kz.vko.guide",
+	"appName": "VKO Guide",
+	"webDir": "dist",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 2000,
+			"backgroundColor": "#8B5CF6",
+			"androidSplashResourceName": "splash",
+			"showSpinner": false
+		},
+		"Geolocation": {
+			"permissions": [
+				"location"
+			]
+		}
+	},
+	"server": {
+		"androidScheme": "https"
+	}
+}

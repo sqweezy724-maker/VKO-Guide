@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+android {
+    namespace 'kz.vko.guide'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "kz.vko.guide"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+            hostName: "YOUR_DOMAIN_HERE", // Например: vko-guide.vercel.app
+            defaultUrl: "https://YOUR_DOMAIN_HERE",
+            launcherName: "ВКО Гид",
+            appName: "ВКО Гид",
+            themeColor: "#15803d",
+            backgroundColor: "#ffffff",
+            navigationColor: "#000000",
+            navigationColorDark: "#000000",
+            navigationDividerColor: "#00000000",
+            navigationDividerColorDark: "#00000000",
+            enableNotifications: false,
+            isChromeOSOnly: false
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+}

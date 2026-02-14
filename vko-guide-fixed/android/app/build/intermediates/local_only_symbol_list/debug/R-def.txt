@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+color backgroundColor
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+color navigationColor
+color navigationColorDark
+drawable splash
+string app_name
+string app_short_name
+style Theme.TWA
+style Theme.TWA.Splash
+xml config
+xml file_paths

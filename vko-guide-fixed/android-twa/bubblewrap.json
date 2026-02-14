@@ -1,0 +1,53 @@
+{
+  "appDetails": {
+    "name": "ВКО Гид",
+    "shortName": "ВКО Гид",
+    "packageId": "kz.vko.guide",
+    "startUrl": "/",
+    "orientation": "default",
+    "theme_color": "#15803d",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "enableNotifications": true,
+    "isChromeOSOnly": false
+  },
+  "twaManifest": {
+    "applicationId": "kz.vko.guide",
+    "hostName": "vko-guide.app",
+    "launcherName": "ВКО Гид",
+    "displayMode": "standalone",
+    "orientation": "default",
+    "themeColor": "#15803d",
+    "navigationColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "enableNotifications": true,
+    "startUrl": "/",
+    "iconUrl": "/icon-512.png",
+    "maskableIconUrl": "/icon-512.png",
+    "monochromeIconUrl": "/icon-512.png",
+    "splashScreenFadeOutDuration": 300,
+    "signingKey": {
+      "path": "/android-twa/android.keystore",
+      "alias": "android"
+    },
+    "appVersionName": "1.0.0",
+    "appVersionCode": 1,
+    "shortcuts": [],
+    "generatorApp": "bubblewrap-cli",
+    "webManifestUrl": "/manifest.json",
+    "fallbackType": "customtabs",
+    "features": {
+      "locationDelegation": {
+        "enabled": true
+      },
+      "playBilling": {
+        "enabled": false
+      }
+    },
+    "alphaDependencies": {
+      "enabled": false
+    },
+    "enableSiteSettingsShortcut": true,
+    "isChromeOSOnly": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "kz.vko.guide.app-mergeDebugResources-2:/values-hy/values-hy.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\9.0.0\\transforms\\7f8f444388fb21e6b1de7b6c0a1e47f6\\transformed\\core-1.1.0\\res\\values-hy\\values-hy.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "476",
+                        "endColumns": "100",
+                        "endOffsets": "572"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\9.0.0\\transforms\\43cf439a7f2f4e061e197ef567ab6801\\transformed\\browser-1.4.0\\res\\values-hy\\values-hy.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,159,262,373",
+                        "endColumns": "103,102,110,102",
+                        "endOffsets": "154,257,368,471"
+                    }
+                }
+            ]
+        }
+    ]
+}

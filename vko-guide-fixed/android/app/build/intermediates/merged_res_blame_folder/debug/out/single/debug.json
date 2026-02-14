@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "kz.vko.guide.app-merged_res-4:/xml_config.xml.flat",
+        "source": "kz.vko.guide.app-main-6:/xml/config.xml"
+    },
+    {
+        "merged": "kz.vko.guide.app-merged_res-4:/drawable_splash.xml.flat",
+        "source": "kz.vko.guide.app-main-6:/drawable/splash.xml"
+    },
+    {
+        "merged": "kz.vko.guide.app-merged_res-4:/xml_file_paths.xml.flat",
+        "source": "kz.vko.guide.app-main-6:/xml/file_paths.xml"
+    }
+]

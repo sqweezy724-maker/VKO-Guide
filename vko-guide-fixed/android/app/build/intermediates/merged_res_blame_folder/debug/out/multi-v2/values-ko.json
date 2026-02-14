@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "kz.vko.guide.app-mergeDebugResources-2:/values-ko/values-ko.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\9.0.0\\transforms\\7f8f444388fb21e6b1de7b6c0a1e47f6\\transformed\\core-1.1.0\\res\\values-ko\\values-ko.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "431",
+                        "endColumns": "100",
+                        "endOffsets": "527"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\9.0.0\\transforms\\43cf439a7f2f4e061e197ef567ab6801\\transformed\\browser-1.4.0\\res\\values-ko\\values-ko.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,141,234,337",
+                        "endColumns": "85,92,102,93",
+                        "endOffsets": "136,229,332,426"
+                    }
+                }
+            ]
+        }
+    ]
+}

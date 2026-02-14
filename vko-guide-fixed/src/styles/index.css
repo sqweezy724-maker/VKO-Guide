@@ -1,0 +1,78 @@
+@import "./fonts.css";
+@import "./tailwind.css";
+@import "./theme.css";
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* Prevent browser from intercepting scroll/pinch on the page level */
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Block pinch-to-zoom on the document — map will handle it */
+  touch-action: pan-x pan-y;
+}
+
+/* ── Dark mode: force white text everywhere ─────────────────────────── */
+.dark body,
+.dark #root,
+.dark .vko-dark-text { color: #f9fafb; }
+
+/* ── Scrollbar hide ────────────────────────────────────────────────── */
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+/* ── Leaflet popup — remove default white box, use our custom HTML ─── */
+.leaflet-popup-content-wrapper {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+.leaflet-popup-content { margin: 0 !important; }
+.leaflet-popup-tip-container { display: none !important; }
+.leaflet-popup { margin-bottom: 0 !important; }
+
+/* Prevent default leaflet popup white background */
+.vko-popup .leaflet-popup-content-wrapper {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ── Map container: must not steal scroll from page ─────────────────── */
+.leaflet-container {
+  font-family: inherit;
+  /* only capture touch inside the map element */
+  touch-action: none;
+}
+
+/* ── Prevent browser zoom (Ctrl+scroll / pinch) outside map ─────────── */
+@media (pointer: fine) {
+  /* on desktop, allow normal scroll everywhere except map */
+  body { touch-action: auto; }
+}
+
+/* ── Animations ──────────────────────────────────────────────────────── */
+@keyframes gpulse {
+  0%, 100% { transform: scale(1); opacity: .5; }
+  50% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ── Dark mode leaflet controls ──────────────────────────────────────── */
+.dark .leaflet-bar a,
+.dark .leaflet-bar a:hover {
+  background: #1f2937;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+/* ── Smooth transitions ──────────────────────────────────────────────── */
+.transition-colors {
+  transition: background-color .2s, color .2s, border-color .2s;
+}

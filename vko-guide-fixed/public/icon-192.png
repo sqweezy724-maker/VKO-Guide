@@ -1,0 +1,18 @@
+<svg width="192" height="192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#15803d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="192" height="192" fill="url(#grad)" rx="40"/>
+  
+  <!-- Пин локации -->
+  <path d="M96 40 C76 40 60 56 60 76 C60 100 96 132 96 132 C96 132 132 100 132 76 C132 56 116 40 96 40 Z" fill="white" opacity="0.95"/>
+  <circle cx="96" cy="76" r="12" fill="#15803d"/>
+  
+  <!-- Текст -->
+  <text x="96" y="165" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">ВКО</text>
+</svg>
